@@ -33,7 +33,7 @@ namespace LtiLibrary.Core.Lti1
             HttpMethod = "POST";
             LaunchPresentationLocale = CultureInfo.CurrentCulture.Name;
             LtiMessageType = messageType;
-            LtiVersion = LtiConstants.LtiVersion;
+            LtiVersion = LtiConstants.LtiVersion1;
         }
 
         #region ILtiRequest Parameters

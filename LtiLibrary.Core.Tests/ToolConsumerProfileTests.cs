@@ -18,7 +18,7 @@ namespace LtiLibrary.Core.Tests
             var profile = new ToolConsumerProfile
             {
                 Id = new Uri("http://lms.example.com/profile/b6ffa601-ce1d-4549-9ccf-145670a964d4"),
-                LtiVersion = LtiConstants.LtiVersion,
+                LtiVersion = LtiConstants.LtiVersion1,
                 Guid = "b6ffa601-ce1d-4549-9ccf-145670a964d4",
                 ProductInstance = new ProductInstance
                 {

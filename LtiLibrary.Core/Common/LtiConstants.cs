@@ -26,10 +26,12 @@ namespace LtiLibrary.Core.Common
         public static readonly Dictionary<string, Role> RoleUrns;
 
         // LTI
-        public const string LtiVersion = "LTI-1p0";
+        public const string LtiVersion1 = "LTI-1p0";
+        public const string LtiVersion2 = "LTI-2p0";
         public const string BasicLaunchLtiMessageType = "basic-lti-launch-request";
         public const string ContentItemSelectionRequestLtiMessageType = "ContentItemSelectionRequest";
         public const string ContentItemSelectionLtiMessageType = "ContentItemSelection";
+        public const string ToolProxyRegistrationMessageType = "ToolProxyRegistrationRequest";
 
         // Message Parameter Names
         public const string AcceptMediaTypesParameter = "accept_media_types";
