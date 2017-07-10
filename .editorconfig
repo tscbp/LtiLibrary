@@ -1,0 +1,5 @@
+#Declare this as top-most config file
+root = true
+
+[*.{cs,csx}]
+indent_size = 4
