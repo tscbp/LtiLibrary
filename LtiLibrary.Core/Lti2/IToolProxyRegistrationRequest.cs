@@ -1,15 +1,11 @@
 ﻿namespace LtiLibrary.Core.Lti2
 {
-    public interface IToolProxyRegistrationRequest
+    public interface IToolProxyRegistrationRequest : IBasicRequest
     {
         /// <summary>
         /// The custom_ and ext_ parameters in Querystring format suitable for saving in the database.
         /// </summary>
         string CustomParameters { get; set; }
-        /// <summary>
-        /// The HTTP Method of the request
-        /// </summary>
-        string HttpMethod { get; set; }
         /// <summary>
         /// This is a URL to an LMS-specific CSS URL.  There are no standards that describe exactly what CSS classes, etc.
         /// should be in this CSS.  The Tool Provider should send its standard CSS URL that it would apply to its local tools.  

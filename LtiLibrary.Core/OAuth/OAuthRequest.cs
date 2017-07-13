@@ -2,17 +2,11 @@
 using System.Collections.Specialized;
 using System.ComponentModel.DataAnnotations.Schema;
 using LtiLibrary.Core.Common;
-using Newtonsoft.Json;
 
 namespace LtiLibrary.Core.OAuth
 {
-    public class OAuthRequest : IOAuthRequest
+    public class OAuthRequest : BasicRequest, IOAuthRequest
     {
-        public OAuthRequest()
-        {
-            Parameters = new NameValueCollection();
-        }
-
         /// <summary>
         /// The OAuth body hash.
         /// </summary>
@@ -87,11 +81,6 @@ namespace LtiLibrary.Core.OAuth
         }
 
         /// <summary>
-        /// The HTTP Method of the request
-        /// </summary>
-        public string HttpMethod { get; set; }
-
-        /// <summary>
         /// OAuth nonce
         /// </summary>
         public string Nonce
@@ -105,13 +94,6 @@ namespace LtiLibrary.Core.OAuth
                 Parameters[OAuthConstants.NonceParameter] = value;
             }
         }
-
-        /// <summary>
-        /// All the OAuth parameters in the request
-        /// </summary>
-        [NotMapped]
-        [JsonIgnore]
-        public NameValueCollection Parameters { get; }
 
         /// <summary>
         /// OAuth signature
@@ -174,12 +156,6 @@ namespace LtiLibrary.Core.OAuth
                 Timestamp = Convert.ToInt64((value - OAuthConstants.Epoch).TotalSeconds);                
             }
         }
-
-        /// <summary>
-        /// The resource URL.
-        /// </summary>
-        [NotMapped]
-        public Uri Url { get; set; }
 
         /// <summary>
         /// The OAuth version.

@@ -1,29 +1,10 @@
-﻿using System.Collections.Specialized;
-using System.Runtime.Serialization;
+﻿using System.Runtime.Serialization;
 using LtiLibrary.Core.Common;
 
 namespace LtiLibrary.Core.Lti2
 {
-    public class ToolProxyRegistrationRequest : IToolProxyRegistrationRequest
+    public class ToolProxyRegistrationRequest : BasicRequest, IToolProxyRegistrationRequest
     {
-        public ToolProxyRegistrationRequest()
-        {
-            Parameters = new NameValueCollection();
-        }
-
-        public ToolProxyRegistrationRequest(NameValueCollection parameters)
-        {
-            Parameters = parameters;
-        }
-
-        /// <summary>
-        /// All the OAuth parameters in the request
-        /// </summary>
-        public NameValueCollection Parameters
-        {
-            get;
-        }
-
         [DataMember(Name = LtiConstants.LaunchPresentationCssUrlParameter)]
         public string LaunchPresentationCssUrl
         {
@@ -137,14 +118,6 @@ namespace LtiLibrary.Core.Lti2
                     }
                 }
             }
-        }
-
-        /// <summary>
-        /// The HTTP Method of the request
-        /// </summary>
-        public string HttpMethod
-        {
-            get; set;
         }
     }
 }
