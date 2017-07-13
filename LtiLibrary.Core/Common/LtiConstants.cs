@@ -72,6 +72,8 @@ namespace LtiLibrary.Core.Common
         public const string LtiMsgParameter = "lti_msg";
         public const string LtiMessageTypeParameter = "lti_message_type";
         public const string LtiVersionParameter = "lti_version";
+        public const string RegistrationKeyParameter = "reg_key";
+        public const string RegistrationPasswordParameter = "reg_password";
         public const string ResourceLinkDescriptionParameter = "resource_link_description";
         public const string ResourceLinkIdParameter = "resource_link_id";
         public const string ResourceLinkIdHistoryParameter = "resource_link_id_history";
@@ -85,6 +87,7 @@ namespace LtiLibrary.Core.Common
         public const string ToolConsumerInstanceGuidParameter = "tool_consumer_instance_guid";
         public const string ToolConsumerInstanceNameParameter = "tool_consumer_instance_name";
         public const string ToolConsumerInstanceUrlParameter = "tool_consumer_instance_url";
+        public const string ToolConsumerProfileUrlParameter = "tc_profile_url";
         public const string UserIdParameter = "user_id";
         public const string UserImageParameter = "user_image";
 

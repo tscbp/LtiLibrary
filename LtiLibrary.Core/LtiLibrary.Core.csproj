@@ -82,12 +82,14 @@
     <Compile Include="ContentItems\ILtiLink.cs" />
     <Compile Include="Lti1\ILtiRequest.cs" />
     <Compile Include="ContentItems\Image.cs" />
+    <Compile Include="Lti2\IToolProxyRegistrationRequest.cs" />
     <Compile Include="Lti2\ProductDescription.cs" />
     <Compile Include="Lti2\ProductTechnicalDescription.cs" />
     <Compile Include="Lti2\ServiceProviderName.cs" />
     <Compile Include="Lti2\ServiceProviderDescription.cs" />
     <Compile Include="Lti2\ServiceOwnerDescription.cs" />
     <Compile Include="Lti2\ServiceOwnerName.cs" />
+    <Compile Include="Lti2\ToolProxyRegistrationRequest.cs" />
     <Compile Include="Lti2\VendorDescription.cs" />
     <Compile Include="Lti2\ProductName.cs" />
     <Compile Include="Lti2\VendorName.cs" />
