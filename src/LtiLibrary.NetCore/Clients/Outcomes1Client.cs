@@ -72,9 +72,6 @@ namespace LtiLibrary.NetCore.Clients
                 var outcomeResponse = new ClientResponse();
                 try
                 {
-                    client.DefaultRequestHeaders.Accept.Clear();
-                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(LtiConstants.ImsxOutcomeMediaType));
-
                     // Create a UTF8 encoding of the request
                     var xml = await GetXmlAsync(imsxEnvelope).ConfigureAwait(false);
                     var xmlContent = new StringContent(xml, Encoding.UTF8, LtiConstants.ImsxOutcomeMediaType);
@@ -82,6 +79,7 @@ namespace LtiLibrary.NetCore.Clients
                     {
                         Content = xmlContent
                     };
+                    webRequest.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue(LtiConstants.ImsxOutcomeMediaType));
                     await SecuredClient.SignRequest(client, webRequest, consumerKey, consumerSecret, signatureMethod)
                         .ConfigureAwait(false);
 
@@ -165,9 +163,6 @@ namespace LtiLibrary.NetCore.Clients
                 var outcomeResponse = new ClientResponse<Result>();
                 try
                 {
-                    client.DefaultRequestHeaders.Accept.Clear();
-                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(LtiConstants.ImsxOutcomeMediaType));
-
                     // Create a UTF8 encoding of the request
                     var xml = await GetXmlAsync(imsxEnvelope).ConfigureAwait(false);
                     var xmlContent = new StringContent(xml, Encoding.UTF8, LtiConstants.ImsxOutcomeMediaType);
@@ -175,6 +170,7 @@ namespace LtiLibrary.NetCore.Clients
                     {
                         Content = xmlContent
                     };
+                    webRequest.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue(LtiConstants.ImsxOutcomeMediaType));
                     await SecuredClient.SignRequest(client, webRequest, consumerKey, consumerSecret, signatureMethod)
                         .ConfigureAwait(false);
 
@@ -308,9 +304,6 @@ namespace LtiLibrary.NetCore.Clients
                 var outcomeResponse = new ClientResponse();
                 try
                 {
-                    client.DefaultRequestHeaders.Accept.Clear();
-                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(LtiConstants.ImsxOutcomeMediaType));
-
                     // Create a UTF8 encoding of the request
                     var xml = await GetXmlAsync(imsxEnvelope).ConfigureAwait(false);
                     var xmlContent = new StringContent(xml, Encoding.UTF8, LtiConstants.ImsxOutcomeMediaType);
@@ -318,6 +311,7 @@ namespace LtiLibrary.NetCore.Clients
                     {
                         Content = xmlContent
                     };
+                    webRequest.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue(LtiConstants.ImsxOutcomeMediaType));
                     await SecuredClient.SignRequest(client, webRequest, consumerKey, consumerSecret, signatureMethod)
                         .ConfigureAwait(false);
 
